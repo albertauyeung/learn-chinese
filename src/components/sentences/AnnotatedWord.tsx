@@ -37,26 +37,26 @@ export function AnnotatedWord({ word, showAnnotations = true }: AnnotatedWordPro
 
       <AnimatePresence>
         {isHovered && showAnnotations && (
-          <motion.div
-            className="absolute bottom-full mb-2 z-20 pointer-events-none"
-            style={{ left: '50%', transform: 'translateX(-50%)' }}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 10 }}
-            transition={{ duration: 0.15 }}
-          >
-            <div className="bg-dark-hover rounded-xl px-4 py-3 shadow-lg border border-dark-card whitespace-nowrap">
-              <div className="text-center space-y-1">
-                <p className="text-accent-orange text-sm">{jyutping}</p>
-                <p className="text-accent-purple text-sm">{pinyinText}</p>
-                <p className="text-white text-sm font-medium">{word.english}</p>
+          <div className="absolute bottom-full left-1/2 mb-2 z-20 pointer-events-none" style={{ transform: 'translateX(-50%)' }}>
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              transition={{ duration: 0.15 }}
+            >
+              <div className="bg-dark-hover rounded-xl px-4 py-3 shadow-lg border border-dark-card whitespace-nowrap">
+                <div className="text-center space-y-1">
+                  <p className="text-accent-orange text-sm">{jyutping}</p>
+                  <p className="text-accent-purple text-sm">{pinyinText}</p>
+                  <p className="text-white text-sm font-medium">{word.english}</p>
+                </div>
+                {/* Arrow pointer */}
+                <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px">
+                  <div className="border-8 border-transparent border-t-dark-hover"></div>
+                </div>
               </div>
-              {/* Arrow pointer */}
-              <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px">
-                <div className="border-8 border-transparent border-t-dark-hover"></div>
-              </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </span>
