@@ -7,13 +7,17 @@ import { pinyin } from 'pinyin';
  * @returns Jyutping romanization with tone numbers
  */
 export function toJyutping(text: string): string {
-  const result = ToJyutping.getJyutpingList(text);
-  if (!result) return '';
+  try {
+    const result = ToJyutping.getJyutpingList(text);
+    if (!result) return text;
 
-  return result
-    .map(([char, jyutping]) => jyutping || char)
-    .join(' ')
-    .trim();
+    return result
+      .map(([char, jyutping]) => jyutping || char)
+      .join(' ')
+      .trim();
+  } catch {
+    return text;
+  }
 }
 
 /**
@@ -22,12 +26,16 @@ export function toJyutping(text: string): string {
  * @returns Pinyin with tone marks
  */
 export function toPinyin(text: string): string {
-  const result = pinyin(text, {
-    style: 'tone',
-    heteronym: false,
-  });
+  try {
+    const result = pinyin(text, {
+      style: 'tone',
+      heteronym: false,
+    });
 
-  return result.map((p: string[]) => p[0]).join(' ');
+    return result.map((p: string[]) => p[0]).join(' ');
+  } catch {
+    return text;
+  }
 }
 
 /**
