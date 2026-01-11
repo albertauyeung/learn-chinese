@@ -21,13 +21,14 @@ export function LessonCard({ lesson }: LessonCardProps) {
 
   const totalItems =
     lesson.vocabulary.length + lesson.sentences.length + 1 + lesson.quiz.length;
+  // Cap progress counts to lesson content to handle stale progress data
   const completedItems =
-    progress.viewedVocabulary.length +
-    progress.viewedSentences.length +
+    Math.min(progress.viewedVocabulary.length, lesson.vocabulary.length) +
+    Math.min(progress.viewedSentences.length, lesson.sentences.length) +
     (progress.storyRead ? 1 : 0) +
     (progress.quizScores.length > 0 ? lesson.quiz.length : 0);
 
-  const progressPercent = Math.round((completedItems / totalItems) * 100);
+  const progressPercent = Math.min(100, Math.round((completedItems / totalItems) * 100));
 
   return (
     <Link to={`/lesson/${lesson.id}`}>
