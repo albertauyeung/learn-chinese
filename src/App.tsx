@@ -9,7 +9,7 @@ import { QuizSection } from './components/quiz';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/learn-chinese">
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
