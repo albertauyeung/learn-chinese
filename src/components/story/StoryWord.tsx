@@ -26,7 +26,7 @@ export function StoryWord({
     <span className="inline-flex flex-col items-center mx-0.5 mb-2">
       {/* Annotations above */}
       {hasAnnotations && (
-        <span className="flex flex-col items-center text-xs leading-tight mb-1">
+        <span className="flex flex-col items-center text-lg leading-snug mb-1">
           {showJyutping && (
             <span className="text-accent-orange">{jyutping}</span>
           )}
