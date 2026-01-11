@@ -7,8 +7,17 @@ interface LessonCardProps {
   lesson: Lesson;
 }
 
+// Stable empty progress object to avoid creating new objects
+const emptyProgress = {
+  viewedVocabulary: [] as string[],
+  viewedSentences: [] as string[],
+  storyRead: false,
+  quizScores: [] as { date: string; score: number; total: number }[],
+};
+
 export function LessonCard({ lesson }: LessonCardProps) {
-  const progress = useAppStore((state) => state.getProgress(lesson.id));
+  // Access progress directly from state to avoid creating new objects
+  const progress = useAppStore((state) => state.progress[lesson.id]) || emptyProgress;
 
   const totalItems =
     lesson.vocabulary.length + lesson.sentences.length + 1 + lesson.quiz.length;

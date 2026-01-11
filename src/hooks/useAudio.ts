@@ -21,6 +21,15 @@ export function useAudio(src: string | undefined, options: UseAudioOptions = {})
   const [error, setError] = useState<string | null>(null);
   const soundRef = useRef<Howl | null>(null);
 
+  // Store callbacks in refs to avoid dependency issues
+  const onEndRef = useRef(options.onEnd);
+  const onErrorRef = useRef(options.onError);
+
+  useEffect(() => {
+    onEndRef.current = options.onEnd;
+    onErrorRef.current = options.onError;
+  }, [options.onEnd, options.onError]);
+
   // Initialize or update the Howl instance when src changes
   useEffect(() => {
     if (!src) {
@@ -39,7 +48,7 @@ export function useAudio(src: string | undefined, options: UseAudioOptions = {})
       onloaderror: (_id, err) => {
         setIsLoading(false);
         setError(`Failed to load audio: ${err}`);
-        options.onError?.(err);
+        onErrorRef.current?.(err);
       },
       onplay: () => {
         setIsPlaying(true);
@@ -52,12 +61,12 @@ export function useAudio(src: string | undefined, options: UseAudioOptions = {})
       },
       onend: () => {
         setIsPlaying(false);
-        options.onEnd?.();
+        onEndRef.current?.();
       },
       onplayerror: (_id, err) => {
         setIsPlaying(false);
         setError(`Failed to play audio: ${err}`);
-        options.onError?.(err);
+        onErrorRef.current?.(err);
       },
     });
 
@@ -67,7 +76,7 @@ export function useAudio(src: string | undefined, options: UseAudioOptions = {})
     return () => {
       sound.unload();
     };
-  }, [src, options.onEnd, options.onError]);
+  }, [src]);
 
   const play = useCallback(() => {
     if (soundRef.current) {
