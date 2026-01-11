@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '熱', english: 'hot' },
     { id: 'vocab-07', character: '凍', english: 'cold' },
     { id: 'vocab-08', character: '飲', english: 'drink' },
+    { id: 'vocab-09', character: '叉燒包', english: 'char siu bao' },
+    { id: 'vocab-10', character: '蛋撻', english: 'egg tart' },
   ],
   sentences: [
     {
@@ -88,6 +90,30 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我要一個叉燒包。',
+      english: 'I want a char siu bao.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '要', english: 'want' },
+        { character: '一', english: 'one' },
+        { character: '個', english: '(measure word)' },
+        { character: '叉燒包', english: 'char siu bao', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '蛋撻好甜！',
+      english: 'The egg tart is so sweet!',
+      words: [
+        { character: '蛋撻', english: 'egg tart', isVocab: true },
+        { character: '好', english: 'so' },
+        { character: '甜', english: 'sweet' },
+        { character: '！', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -131,21 +157,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 茶 mean?',
       options: ['coffee', 'tea', 'water', 'juice'],
-      correctAnswer: 'tea',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What is 蝦餃?',
       options: ['pork bun', 'shrimp dumpling', 'siu mai', 'egg tart'],
-      correctAnswer: 'shrimp dumpling',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'hot'?",
       options: ['凍', '熱', '飲', '茶'],
-      correctAnswer: '熱',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -162,7 +188,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '飲茶 means:',
       options: ['drink water', 'eat rice', 'have dim sum', 'buy tea'],
-      correctAnswer: 'have dim sum',
+      correctAnswer: 2,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What is 叉燒包?',
+      options: ['shrimp dumpling', 'egg tart', 'char siu bao', 'siu mai'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 蛋撻 mean?',
+      options: ['egg roll', 'egg tart', 'egg bun', 'egg dumpling'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'cold'?",
+      options: ['熱', '飲', '凍', '茶'],
+      correctAnswer: 2,
     },
   ],
 };

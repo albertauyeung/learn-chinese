@@ -9,34 +9,49 @@ interface ListeningQuestionProps {
 }
 
 export function ListeningQuestion({ question, onAnswer }: ListeningQuestionProps) {
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [hasAnswered, setHasAnswered] = useState(false);
 
-  const handleSelect = (option: string) => {
+  // Handle both number (index) and string (option value) correctAnswer
+  const isCorrectAnswer = (index: number): boolean => {
+    if (typeof question.correctAnswer === 'number') {
+      return index === question.correctAnswer;
+    }
+    return question.options[index] === question.correctAnswer;
+  };
+
+  const getCorrectAnswerText = (): string => {
+    if (typeof question.correctAnswer === 'number') {
+      return question.options[question.correctAnswer];
+    }
+    return question.correctAnswer;
+  };
+
+  const handleSelect = (index: number) => {
     if (hasAnswered) return;
 
-    setSelectedAnswer(option);
+    setSelectedIndex(index);
     setHasAnswered(true);
 
-    const isCorrect = option === question.correctAnswer;
+    const isCorrect = isCorrectAnswer(index);
 
     setTimeout(() => {
       onAnswer(isCorrect);
-      setSelectedAnswer(null);
+      setSelectedIndex(null);
       setHasAnswered(false);
     }, 1200);
   };
 
-  const getOptionStyle = (option: string) => {
+  const getOptionStyle = (index: number) => {
     if (!hasAnswered) {
       return 'bg-dark-hover hover:bg-dark-card hover:border-accent-blue border-dark-hover';
     }
 
-    if (option === question.correctAnswer) {
+    if (isCorrectAnswer(index)) {
       return 'bg-accent-green/20 border-accent-green';
     }
 
-    if (option === selectedAnswer && option !== question.correctAnswer) {
+    if (index === selectedIndex && !isCorrectAnswer(index)) {
       return 'bg-accent-pink/20 border-accent-pink';
     }
 
@@ -61,10 +76,10 @@ export function ListeningQuestion({ question, onAnswer }: ListeningQuestionProps
         {question.options.map((option, index) => (
           <motion.button
             key={index}
-            onClick={() => handleSelect(option)}
+            onClick={() => handleSelect(index)}
             className={`
               p-4 rounded-xl border-2 text-center transition-colors
-              ${getOptionStyle(option)}
+              ${getOptionStyle(index)}
               ${hasAnswered ? 'cursor-default' : 'cursor-pointer'}
             `}
             whileHover={!hasAnswered ? { scale: 1.02 } : {}}
@@ -82,11 +97,11 @@ export function ListeningQuestion({ question, onAnswer }: ListeningQuestionProps
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          {selectedAnswer === question.correctAnswer ? (
+          {selectedIndex !== null && isCorrectAnswer(selectedIndex) ? (
             <span className="text-2xl text-accent-green font-bold">Correct!</span>
           ) : (
             <span className="text-2xl text-accent-pink font-bold">
-              Incorrect. The answer is: {question.correctAnswer}
+              Incorrect. The answer is: {getCorrectAnswerText()}
             </span>
           )}
         </motion.div>

@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '可愛', english: 'cute' },
     { id: 'vocab-07', character: '叫', english: 'call, bark' },
     { id: 'vocab-08', character: '養', english: 'raise, keep' },
+    { id: 'vocab-09', character: '兔', english: 'rabbit' },
+    { id: 'vocab-10', character: '豬', english: 'pig' },
   ],
   sentences: [
     {
@@ -87,6 +89,28 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '兔好可愛！',
+      english: 'The rabbit is so cute!',
+      words: [
+        { character: '兔', english: 'rabbit', isVocab: true },
+        { character: '好', english: 'so' },
+        { character: '可愛', english: 'cute', isVocab: true },
+        { character: '！', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '豬好肥。',
+      english: 'The pig is very fat.',
+      words: [
+        { character: '豬', english: 'pig', isVocab: true },
+        { character: '好', english: 'very' },
+        { character: '肥', english: 'fat' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -127,21 +151,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 狗 mean?',
       options: ['cat', 'dog', 'bird', 'fish'],
-      correctAnswer: 'dog',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 可愛 mean?',
       options: ['big', 'small', 'cute', 'fast'],
-      correctAnswer: 'cute',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'cat'?",
       options: ['狗', '貓', '鳥', '魚'],
-      correctAnswer: '貓',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -158,7 +182,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '鳥會飛 means:',
       options: ['Birds can swim', 'Birds can fly', 'Birds can run', 'Birds can sing'],
-      correctAnswer: 'Birds can fly',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 兔 mean?',
+      options: ['mouse', 'rabbit', 'hamster', 'squirrel'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: "Which word means 'pig'?",
+      options: ['狗', '貓', '豬', '兔'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: '我想養狗 means:',
+      options: ['I have a dog', 'I want to keep a dog', 'I see a dog', 'I like dogs'],
+      correctAnswer: 1,
     },
   ],
 };

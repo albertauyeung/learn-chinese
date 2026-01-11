@@ -1,6 +1,6 @@
 import type { Lesson } from '../types';
 
-const lesson: Lesson = {
+const lesson04: Lesson = {
   id: 'lesson-04',
   theme: 'friends-1',
   icon: '👫',
@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '喜歡', english: 'like' },
     { id: 'vocab-07', character: '說', english: 'speak, say' },
     { id: 'vocab-08', character: '話', english: 'words, speech' },
+    { id: 'vocab-09', character: '分享', english: 'share' },
+    { id: 'vocab-10', character: '幫忙', english: 'help' },
   ],
   sentences: [
     {
@@ -90,6 +92,29 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我和朋友分享。',
+      english: 'I share with my friend.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '和', english: 'with' },
+        { character: '朋友', english: 'friend', isVocab: true },
+        { character: '分享', english: 'share', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '朋友幫忙我。',
+      english: 'My friend helps me.',
+      words: [
+        { character: '朋友', english: 'friend', isVocab: true },
+        { character: '幫忙', english: 'help', isVocab: true },
+        { character: '我', english: 'me' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -129,21 +154,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 朋友 mean?',
       options: ['family', 'friend', 'teacher', 'student'],
-      correctAnswer: 'friend',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 開心 mean?',
       options: ['sad', 'angry', 'happy', 'tired'],
-      correctAnswer: 'happy',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'play'?",
       options: ['笑', '玩', '說', '喜歡'],
-      correctAnswer: '玩',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -160,9 +185,30 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '我們一起玩 means:',
       options: ['I play alone', 'We play together', 'They are friends', 'I like playing'],
-      correctAnswer: 'We play together',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 分享 mean?',
+      options: ['take', 'share', 'give', 'keep'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 幫忙 mean?',
+      options: ['play', 'talk', 'help', 'run'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'like'?",
+      options: ['笑', '說', '玩', '喜歡'],
+      correctAnswer: 3,
     },
   ],
 };
 
-export default lesson;
+export default lesson04;

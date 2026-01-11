@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '輸', english: 'lose' },
     { id: 'vocab-07', character: '比賽', english: 'competition' },
     { id: 'vocab-08', character: '加油', english: 'go for it' },
+    { id: 'vocab-09', character: '跑步', english: 'run' },
+    { id: 'vocab-10', character: '籃球', english: 'basketball' },
   ],
   sentences: [
     {
@@ -87,6 +89,28 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我每天跑步。',
+      english: 'I run every day.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '每天', english: 'every day' },
+        { character: '跑步', english: 'run', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '哥哥打籃球。',
+      english: 'Older brother plays basketball.',
+      words: [
+        { character: '哥哥', english: 'older brother' },
+        { character: '打', english: 'play', isVocab: true },
+        { character: '籃球', english: 'basketball', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -125,21 +149,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 運動 mean?',
       options: ['rest', 'sports', 'food', 'game'],
-      correctAnswer: 'sports',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 游水 mean?',
       options: ['run', 'jump', 'swim', 'kick'],
-      correctAnswer: 'swim',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'win'?",
       options: ['輸', '贏', '踢', '打'],
-      correctAnswer: '贏',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -156,7 +180,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '加油 means:',
       options: ['goodbye', 'thank you', 'go for it', 'sorry'],
-      correctAnswer: 'go for it',
+      correctAnswer: 2,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 跑步 mean?',
+      options: ['swim', 'walk', 'run', 'jump'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: "Which word means 'basketball'?",
+      options: ['足球', '籃球', '排球', '網球'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: '我們贏了比賽 means:',
+      options: ['We lost the game', 'We won the competition', 'We played the game', 'We watched the match'],
+      correctAnswer: 1,
     },
   ],
 };

@@ -1,6 +1,6 @@
 import type { Lesson } from '../types';
 
-const lesson: Lesson = {
+const lesson05: Lesson = {
   id: 'lesson-05',
   theme: 'playground-1',
   icon: '🎢',
@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '慢', english: 'slow' },
     { id: 'vocab-07', character: '高', english: 'high, tall' },
     { id: 'vocab-08', character: '小心', english: 'be careful' },
+    { id: 'vocab-09', character: '滑梯', english: 'slide' },
+    { id: 'vocab-10', character: '鞦韆', english: 'swing' },
   ],
   sentences: [
     {
@@ -90,6 +92,28 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我玩滑梯。',
+      english: 'I play on the slide.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '玩', english: 'play' },
+        { character: '滑梯', english: 'slide', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '鞦韆好高。',
+      english: 'The swing is so high.',
+      words: [
+        { character: '鞦韆', english: 'swing', isVocab: true },
+        { character: '好', english: 'so' },
+        { character: '高', english: 'high', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -130,21 +154,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 遊樂場 mean?',
       options: ['school', 'home', 'playground', 'restaurant'],
-      correctAnswer: 'playground',
+      correctAnswer: 2,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 跑 mean?',
       options: ['walk', 'run', 'jump', 'sit'],
-      correctAnswer: 'run',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'ball'?",
       options: ['跑', '跳', '球', '快'],
-      correctAnswer: '球',
+      correctAnswer: 2,
     },
     {
       id: 'q4',
@@ -161,9 +185,30 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '小心 means:',
       options: ['be happy', 'be careful', 'be fast', 'be slow'],
-      correctAnswer: 'be careful',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 滑梯 mean?',
+      options: ['swing', 'slide', 'ball', 'jump'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 鞦韆 mean?',
+      options: ['slide', 'swing', 'run', 'fast'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'jump'?",
+      options: ['跑', '跳', '快', '慢'],
+      correctAnswer: 1,
     },
   ],
 };
 
-export default lesson;
+export default lesson05;

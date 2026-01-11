@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '熱', english: 'hot' },
     { id: 'vocab-07', character: '晴天', english: 'sunny day' },
     { id: 'vocab-08', character: '下', english: 'fall, down' },
+    { id: 'vocab-09', character: '雲', english: 'cloud' },
+    { id: 'vocab-10', character: '雪', english: 'snow' },
   ],
   sentences: [
     {
@@ -86,6 +88,29 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '天有好多雲。',
+      english: 'There are many clouds in the sky.',
+      words: [
+        { character: '天', english: 'sky' },
+        { character: '有', english: 'have' },
+        { character: '好多', english: 'many' },
+        { character: '雲', english: 'clouds', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '下雪了！',
+      english: "It's snowing!",
+      words: [
+        { character: '下', english: 'fall', isVocab: true },
+        { character: '雪', english: 'snow', isVocab: true },
+        { character: '了', english: '(change of state)' },
+        { character: '！', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -125,21 +150,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 天氣 mean?',
       options: ['sky', 'weather', 'sun', 'rain'],
-      correctAnswer: 'weather',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 太陽 mean?',
       options: ['moon', 'star', 'sun', 'cloud'],
-      correctAnswer: 'sun',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'cold'?",
       options: ['熱', '冷', '風', '雨'],
-      correctAnswer: '冷',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -156,7 +181,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '下雨了 means:',
       options: ['It is sunny', 'It is raining', 'It is windy', 'It is cold'],
-      correctAnswer: 'It is raining',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 雲 mean?',
+      options: ['rain', 'snow', 'cloud', 'fog'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: "Which word means 'snow'?",
+      options: ['雨', '雪', '風', '雲'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: '冬天很冷 means:',
+      options: ['Winter is hot', 'Winter is cold', 'Winter is windy', 'Winter is rainy'],
+      correctAnswer: 1,
     },
   ],
 };

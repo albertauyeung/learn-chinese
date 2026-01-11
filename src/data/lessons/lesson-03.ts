@@ -1,6 +1,6 @@
 import type { Lesson } from '../types';
 
-const lesson: Lesson = {
+const lesson03: Lesson = {
   id: 'lesson-03',
   theme: 'school-1',
   icon: '🏫',
@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '讀', english: 'read' },
     { id: 'vocab-07', character: '寫', english: 'write' },
     { id: 'vocab-08', character: '學', english: 'learn' },
+    { id: 'vocab-09', character: '桌子', english: 'desk' },
+    { id: 'vocab-10', character: '椅子', english: 'chair' },
   ],
   sentences: [
     {
@@ -88,6 +90,29 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '桌子上有書。',
+      english: 'There is a book on the desk.',
+      words: [
+        { character: '桌子', english: 'desk', isVocab: true },
+        { character: '上', english: 'on' },
+        { character: '有', english: 'have' },
+        { character: '書', english: 'book', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '我坐椅子。',
+      english: 'I sit on a chair.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '坐', english: 'sit' },
+        { character: '椅子', english: 'chair', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -129,21 +154,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 學校 mean?',
       options: ['home', 'school', 'park', 'store'],
-      correctAnswer: 'school',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 老師 mean?',
       options: ['student', 'teacher', 'friend', 'parent'],
-      correctAnswer: 'teacher',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'book'?",
       options: ['筆', '書', '學', '寫'],
-      correctAnswer: '書',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -160,9 +185,30 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '我去學校 means:',
       options: ['I love school', 'I go to school', 'I am at school', 'School is good'],
-      correctAnswer: 'I go to school',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 桌子 mean?',
+      options: ['chair', 'desk', 'book', 'pen'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 椅子 mean?',
+      options: ['desk', 'table', 'chair', 'door'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'classmate'?",
+      options: ['老師', '同學', '學校', '學'],
+      correctAnswer: 1,
     },
   ],
 };
 
-export default lesson;
+export default lesson03;

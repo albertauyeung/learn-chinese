@@ -38,7 +38,7 @@ export interface MultipleChoiceQuestion {
   type: 'multiple-choice';
   question: string;
   options: string[];
-  correctAnswer: string;
+  correctAnswer: number | string;
   vocabularyId?: string;
 }
 
@@ -55,7 +55,7 @@ export interface ListeningQuestion {
   question: string;
   audioFile: string;
   options: string[];
-  correctAnswer: string;
+  correctAnswer: number | string;
   vocabularyId?: string;
 }
 
