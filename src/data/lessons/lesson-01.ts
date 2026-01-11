@@ -17,6 +17,8 @@ const lesson01: Lesson = {
     { id: 'vocab-06', character: '好', english: 'good' },
     { id: 'vocab-07', character: '在', english: 'at, in' },
     { id: 'vocab-08', character: '是', english: 'is, am' },
+    { id: 'vocab-09', character: '門', english: 'door' },
+    { id: 'vocab-10', character: '窗', english: 'window' },
   ],
   sentences: [
     {
@@ -85,6 +87,28 @@ const lesson01: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '門在這裡。',
+      english: 'The door is here.',
+      words: [
+        { character: '門', english: 'door', isVocab: true },
+        { character: '在', english: 'is at', isVocab: true },
+        { character: '這裡', english: 'here' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '窗好大。',
+      english: 'The window is so big.',
+      words: [
+        { character: '窗', english: 'window', isVocab: true },
+        { character: '好', english: 'so', isVocab: true },
+        { character: '大', english: 'big' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -126,21 +150,21 @@ const lesson01: Lesson = {
       type: 'multiple-choice',
       question: 'What does 家 mean?',
       options: ['school', 'home', 'park', 'car'],
-      correctAnswer: 'home',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 爸爸 mean?',
       options: ['mom', 'dad', 'sister', 'brother'],
-      correctAnswer: 'dad',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'mom'?",
       options: ['爸爸', '媽媽', '我', '你'],
-      correctAnswer: '媽媽',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -157,7 +181,28 @@ const lesson01: Lesson = {
       type: 'multiple-choice',
       question: '爸爸在家 means:',
       options: ['Dad is good', 'Dad is at home', 'Mom is at home', 'I am home'],
-      correctAnswer: 'Dad is at home',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 門 mean?',
+      options: ['window', 'wall', 'door', 'floor'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 窗 mean?',
+      options: ['door', 'window', 'table', 'chair'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'you'?",
+      options: ['我', '你', '好', '在'],
+      correctAnswer: 1,
     },
   ],
 };

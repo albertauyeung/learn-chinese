@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '聽', english: 'listen' },
     { id: 'vocab-07', character: '音樂', english: 'music' },
     { id: 'vocab-08', character: '最', english: 'most' },
+    { id: 'vocab-09', character: '玩遊戲', english: 'play games' },
+    { id: 'vocab-10', character: '彈琴', english: 'play piano' },
   ],
   sentences: [
     {
@@ -88,6 +90,28 @@ const lesson: Lesson = {
         { character: '？', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我喜歡玩遊戲。',
+      english: 'I like playing games.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '喜歡', english: 'like' },
+        { character: '玩遊戲', english: 'play games', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '妹妹學彈琴。',
+      english: 'Younger sister learns to play piano.',
+      words: [
+        { character: '妹妹', english: 'younger sister' },
+        { character: '學', english: 'learn' },
+        { character: '彈琴', english: 'play piano', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -130,21 +154,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 興趣 mean?',
       options: ['work', 'hobby', 'school', 'home'],
-      correctAnswer: 'hobby',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 畫畫 mean?',
       options: ['sing', 'dance', 'draw', 'read'],
-      correctAnswer: 'draw',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'music'?",
       options: ['唱歌', '跳舞', '音樂', '畫畫'],
-      correctAnswer: '音樂',
+      correctAnswer: 2,
     },
     {
       id: 'q4',
@@ -161,7 +185,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '聽音樂 means:',
       options: ['play music', 'listen to music', 'make music', 'like music'],
-      correctAnswer: 'listen to music',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 玩遊戲 mean?',
+      options: ['watch movies', 'play games', 'do homework', 'go shopping'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: "Which word means 'play piano'?",
+      options: ['唱歌', '彈琴', '跳舞', '畫畫'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: '我的興趣是畫畫 means:',
+      options: ['I like to draw', 'My hobby is drawing', 'I can draw', 'Drawing is fun'],
+      correctAnswer: 1,
     },
   ],
 };

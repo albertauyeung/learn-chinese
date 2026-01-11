@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '請', english: 'please' },
     { id: 'vocab-07', character: '謝謝', english: 'thank you' },
     { id: 'vocab-08', character: '好味', english: 'tasty' },
+    { id: 'vocab-09', character: '菜單', english: 'menu' },
+    { id: 'vocab-10', character: '埋單', english: 'bill, check' },
   ],
   sentences: [
     {
@@ -89,6 +91,29 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '請給我菜單。',
+      english: 'Please give me the menu.',
+      words: [
+        { character: '請', english: 'please', isVocab: true },
+        { character: '給', english: 'give' },
+        { character: '我', english: 'me' },
+        { character: '菜單', english: 'menu', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '我們要埋單。',
+      english: 'We want the bill.',
+      words: [
+        { character: '我們', english: 'we' },
+        { character: '要', english: 'want' },
+        { character: '埋單', english: 'bill', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -127,21 +152,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 餐廳 mean?',
       options: ['home', 'school', 'restaurant', 'store'],
-      correctAnswer: 'restaurant',
+      correctAnswer: 2,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 湯 mean?',
       options: ['rice', 'soup', 'noodles', 'tea'],
-      correctAnswer: 'soup',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'chopsticks'?",
       options: ['碗', '筷子', '菜', '湯'],
-      correctAnswer: '筷子',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -158,7 +183,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '一碗湯 means:',
       options: ['one dish', 'one bowl of soup', 'hot soup', 'tasty soup'],
-      correctAnswer: 'one bowl of soup',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 菜單 mean?',
+      options: ['food', 'menu', 'bill', 'table'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: "Which word means 'bill' or 'check'?",
+      options: ['菜單', '埋單', '筷子', '碗'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: '請給我菜單 means:',
+      options: ['Please give me food', 'Please give me the menu', 'Please give me the bill', 'Please give me chopsticks'],
+      correctAnswer: 1,
     },
   ],
 };

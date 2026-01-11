@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '開', english: 'drive' },
     { id: 'vocab-07', character: '到', english: 'arrive' },
     { id: 'vocab-08', character: '等', english: 'wait' },
+    { id: 'vocab-09', character: '飛機', english: 'airplane' },
+    { id: 'vocab-10', character: '單車', english: 'bicycle' },
   ],
   sentences: [
     {
@@ -85,6 +87,30 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我坐飛機去旅行。',
+      english: 'I take an airplane to travel.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '坐', english: 'take', isVocab: true },
+        { character: '飛機', english: 'airplane', isVocab: true },
+        { character: '去', english: 'go' },
+        { character: '旅行', english: 'travel' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '姐姐踩單車。',
+      english: 'Older sister rides a bicycle.',
+      words: [
+        { character: '姐姐', english: 'older sister' },
+        { character: '踩', english: 'ride' },
+        { character: '單車', english: 'bicycle', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -124,21 +150,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 巴士 mean?',
       options: ['car', 'bus', 'train', 'plane'],
-      correctAnswer: 'bus',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 地鐵 mean?',
       options: ['bus', 'car', 'MTR/subway', 'boat'],
-      correctAnswer: 'MTR/subway',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'wait'?",
       options: ['坐', '開', '到', '等'],
-      correctAnswer: '等',
+      correctAnswer: 3,
     },
     {
       id: 'q4',
@@ -155,7 +181,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '我坐巴士 means:',
       options: ['I drive a bus', 'I take the bus', 'I wait for the bus', 'I see a bus'],
-      correctAnswer: 'I take the bus',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 飛機 mean?',
+      options: ['helicopter', 'airplane', 'rocket', 'hot air balloon'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: "Which word means 'bicycle'?",
+      options: ['巴士', '單車', '地鐵', '船'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: '爸爸開車 means:',
+      options: ['Dad takes the bus', 'Dad drives a car', 'Dad waits for a car', 'Dad buys a car'],
+      correctAnswer: 1,
     },
   ],
 };

@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '酸', english: 'sour' },
     { id: 'vocab-07', character: '好食', english: 'yummy' },
     { id: 'vocab-08', character: '想', english: 'want, think' },
+    { id: 'vocab-09', character: '西瓜', english: 'watermelon' },
+    { id: 'vocab-10', character: '提子', english: 'grapes' },
   ],
   sentences: [
     {
@@ -85,6 +87,30 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '西瓜好大！',
+      english: 'The watermelon is so big!',
+      words: [
+        { character: '西瓜', english: 'watermelon', isVocab: true },
+        { character: '好', english: 'so' },
+        { character: '大', english: 'big' },
+        { character: '！', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '提子好甜好好吃。',
+      english: 'The grapes are sweet and delicious.',
+      words: [
+        { character: '提子', english: 'grapes', isVocab: true },
+        { character: '好', english: 'very' },
+        { character: '甜', english: 'sweet', isVocab: true },
+        { character: '好', english: 'very' },
+        { character: '好吃', english: 'delicious' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -124,21 +150,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 生果 mean?',
       options: ['vegetable', 'fruit', 'meat', 'rice'],
-      correctAnswer: 'fruit',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 蘋果 mean?',
       options: ['orange', 'banana', 'apple', 'grape'],
-      correctAnswer: 'apple',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'sweet'?",
       options: ['酸', '甜', '好食', '想'],
-      correctAnswer: '甜',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -155,7 +181,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '好甜 means:',
       options: ['very sour', 'very sweet', 'very yummy', 'very big'],
-      correctAnswer: 'very sweet',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 西瓜 mean?',
+      options: ['apple', 'grapes', 'watermelon', 'banana'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 提子 mean?',
+      options: ['grapes', 'orange', 'watermelon', 'apple'],
+      correctAnswer: 0,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'sour'?",
+      options: ['甜', '好食', '酸', '想'],
+      correctAnswer: 2,
     },
   ],
 };

@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '幫', english: 'help' },
     { id: 'vocab-07', character: '做', english: 'make, do' },
     { id: 'vocab-08', character: '小心', english: 'be careful' },
+    { id: 'vocab-09', character: '炒', english: 'stir-fry' },
+    { id: 'vocab-10', character: '蒸', english: 'steam' },
   ],
   sentences: [
     {
@@ -91,6 +93,28 @@ const lesson: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '爸爸炒菜。',
+      english: 'Dad stir-fries vegetables.',
+      words: [
+        { character: '爸爸', english: 'dad' },
+        { character: '炒', english: 'stir-fry', isVocab: true },
+        { character: '菜', english: 'vegetables' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '媽媽蒸魚。',
+      english: 'Mom steams fish.',
+      words: [
+        { character: '媽媽', english: 'mom' },
+        { character: '蒸', english: 'steam', isVocab: true },
+        { character: '魚', english: 'fish' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -130,21 +154,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 煮 mean?',
       options: ['eat', 'cook', 'drink', 'buy'],
-      correctAnswer: 'cook',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 洗 mean?',
       options: ['cut', 'cook', 'wash', 'eat'],
-      correctAnswer: 'wash',
+      correctAnswer: 2,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'help'?",
       options: ['做', '幫', '煮', '切'],
-      correctAnswer: '幫',
+      correctAnswer: 1,
     },
     {
       id: 'q4',
@@ -161,7 +185,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '小心 means:',
       options: ['be happy', 'be careful', 'be fast', 'be quiet'],
-      correctAnswer: 'be careful',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 炒 mean?',
+      options: ['boil', 'steam', 'stir-fry', 'bake'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 蒸 mean?',
+      options: ['steam', 'fry', 'cut', 'wash'],
+      correctAnswer: 0,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'fire'?",
+      options: ['鍋', '火', '煮', '炒'],
+      correctAnswer: 1,
     },
   ],
 };

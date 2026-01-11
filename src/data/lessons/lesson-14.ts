@@ -17,6 +17,8 @@ const lesson: Lesson = {
     { id: 'vocab-06', character: '慶祝', english: 'celebrate' },
     { id: 'vocab-07', character: '禮物', english: 'gift' },
     { id: 'vocab-08', character: '發', english: 'give out' },
+    { id: 'vocab-09', character: '煙花', english: 'fireworks' },
+    { id: 'vocab-10', character: '團圓', english: 'reunion' },
   ],
   sentences: [
     {
@@ -86,6 +88,28 @@ const lesson: Lesson = {
         { character: '！', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '我們看煙花。',
+      english: 'We watch fireworks.',
+      words: [
+        { character: '我們', english: 'we' },
+        { character: '看', english: 'watch' },
+        { character: '煙花', english: 'fireworks', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '全家人團圓。',
+      english: 'The whole family has a reunion.',
+      words: [
+        { character: '全', english: 'whole' },
+        { character: '家人', english: 'family' },
+        { character: '團圓', english: 'reunion', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -123,21 +147,21 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: 'What does 新年 mean?',
       options: ['birthday', 'New Year', 'festival', 'holiday'],
-      correctAnswer: 'New Year',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What is 紅包?',
       options: ['red bag', 'red packet', 'gift box', 'candy'],
-      correctAnswer: 'red packet',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'happy'?",
       options: ['新年', '恭喜', '快樂', '節日'],
-      correctAnswer: '快樂',
+      correctAnswer: 2,
     },
     {
       id: 'q4',
@@ -154,7 +178,28 @@ const lesson: Lesson = {
       type: 'multiple-choice',
       question: '新年快樂 means:',
       options: ['Merry Christmas', 'Happy Birthday', 'Happy New Year', 'Good luck'],
-      correctAnswer: 'Happy New Year',
+      correctAnswer: 2,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 煙花 mean?',
+      options: ['lantern', 'fireworks', 'candle', 'flower'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 團圓 mean?',
+      options: ['party', 'dinner', 'reunion', 'celebration'],
+      correctAnswer: 2,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'celebrate'?",
+      options: ['節日', '慶祝', '快樂', '恭喜'],
+      correctAnswer: 1,
     },
   ],
 };

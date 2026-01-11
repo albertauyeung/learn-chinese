@@ -17,6 +17,8 @@ const lesson02: Lesson = {
     { id: 'vocab-06', character: '個', english: 'measure word' },
     { id: 'vocab-07', character: '和', english: 'and' },
     { id: 'vocab-08', character: '愛', english: 'love' },
+    { id: 'vocab-09', character: '爺爺', english: 'grandpa' },
+    { id: 'vocab-10', character: '奶奶', english: 'grandma' },
   ],
   sentences: [
     {
@@ -88,6 +90,28 @@ const lesson02: Lesson = {
         { character: '。', english: '', isPunctuation: true },
       ],
     },
+    {
+      id: 'sent-07',
+      chinese: '爺爺好好。',
+      english: 'Grandpa is very good.',
+      words: [
+        { character: '爺爺', english: 'grandpa', isVocab: true },
+        { character: '好', english: 'very' },
+        { character: '好', english: 'good' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-08',
+      chinese: '我愛奶奶。',
+      english: 'I love grandma.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '愛', english: 'love', isVocab: true },
+        { character: '奶奶', english: 'grandma', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
   ],
   story: {
     title: {
@@ -130,21 +154,21 @@ const lesson02: Lesson = {
       type: 'multiple-choice',
       question: 'What does 哥哥 mean?',
       options: ['younger brother', 'older brother', 'sister', 'dad'],
-      correctAnswer: 'older brother',
+      correctAnswer: 1,
     },
     {
       id: 'q2',
       type: 'multiple-choice',
       question: 'What does 妹妹 mean?',
       options: ['older sister', 'younger sister', 'mom', 'brother'],
-      correctAnswer: 'younger sister',
+      correctAnswer: 1,
     },
     {
       id: 'q3',
       type: 'multiple-choice',
       question: "Which word means 'love'?",
       options: ['有', '和', '愛', '個'],
-      correctAnswer: '愛',
+      correctAnswer: 2,
     },
     {
       id: 'q4',
@@ -161,7 +185,28 @@ const lesson02: Lesson = {
       type: 'multiple-choice',
       question: '我有哥哥 means:',
       options: ['I am older brother', 'I have an older brother', 'I love older brother', 'Older brother is good'],
-      correctAnswer: 'I have an older brother',
+      correctAnswer: 1,
+    },
+    {
+      id: 'q6',
+      type: 'multiple-choice',
+      question: 'What does 爺爺 mean?',
+      options: ['grandma', 'grandpa', 'uncle', 'aunt'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q7',
+      type: 'multiple-choice',
+      question: 'What does 奶奶 mean?',
+      options: ['grandpa', 'grandma', 'mom', 'sister'],
+      correctAnswer: 1,
+    },
+    {
+      id: 'q8',
+      type: 'multiple-choice',
+      question: "Which word means 'older sister'?",
+      options: ['哥哥', '弟弟', '姐姐', '妹妹'],
+      correctAnswer: 2,
     },
   ],
 };
