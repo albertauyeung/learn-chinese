@@ -1,0 +1,181 @@
+import type { Lesson } from '../types';
+
+const lesson: Lesson = {
+  id: 'lesson-25',
+  theme: 'playground-2',
+  icon: '🎢',
+  title: {
+    chinese: '遊樂場（二）',
+    english: 'At the Playground (2)',
+  },
+  vocabulary: [
+    { id: 'vocab-01', character: '滑梯', english: 'slide' },
+    { id: 'vocab-02', character: '鞦韆', english: 'swing' },
+    { id: 'vocab-03', character: '爬', english: 'climb' },
+    { id: 'vocab-04', character: '排隊', english: 'line up' },
+    { id: 'vocab-05', character: '輪流', english: 'take turns' },
+    { id: 'vocab-06', character: '危險', english: 'dangerous' },
+    { id: 'vocab-07', character: '安全', english: 'safe' },
+    { id: 'vocab-08', character: '累', english: 'tired' },
+  ],
+  sentences: [
+    {
+      id: 'sent-01',
+      chinese: '我喜歡玩滑梯。',
+      english: 'I like playing on the slide.',
+      words: [
+        { character: '我', english: 'I' },
+        { character: '喜歡', english: 'like' },
+        { character: '玩', english: 'play' },
+        { character: '滑梯', english: 'slide', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-02',
+      chinese: '妹妹在盪鞦韆。',
+      english: 'Little sister is on the swing.',
+      words: [
+        { character: '妹妹', english: 'little sister' },
+        { character: '在', english: 'is' },
+        { character: '盪', english: 'swing' },
+        { character: '鞦韆', english: 'swing', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-03',
+      chinese: '弟弟爬得好高。',
+      english: 'Little brother climbs very high.',
+      words: [
+        { character: '弟弟', english: 'little brother' },
+        { character: '爬', english: 'climb', isVocab: true },
+        { character: '得', english: '(complement marker)' },
+        { character: '好', english: 'very' },
+        { character: '高', english: 'high' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-04',
+      chinese: '請排隊，輪流玩。',
+      english: 'Please line up and take turns.',
+      words: [
+        { character: '請', english: 'please' },
+        { character: '排隊', english: 'line up', isVocab: true },
+        { character: '，', english: '', isPunctuation: true },
+        { character: '輪流', english: 'take turns', isVocab: true },
+        { character: '玩', english: 'play' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-05',
+      chinese: '太高了，很危險！',
+      english: 'Too high, very dangerous!',
+      words: [
+        { character: '太', english: 'too' },
+        { character: '高', english: 'high' },
+        { character: '了', english: '(emphasis)' },
+        { character: '，', english: '', isPunctuation: true },
+        { character: '很', english: 'very' },
+        { character: '危險', english: 'dangerous', isVocab: true },
+        { character: '！', english: '', isPunctuation: true },
+      ],
+    },
+    {
+      id: 'sent-06',
+      chinese: '玩了好久，我好累。',
+      english: 'Played for a long time, I am so tired.',
+      words: [
+        { character: '玩', english: 'played' },
+        { character: '了', english: '(completed)' },
+        { character: '好久', english: 'long time' },
+        { character: '，', english: '', isPunctuation: true },
+        { character: '我', english: 'I' },
+        { character: '好', english: 'so' },
+        { character: '累', english: 'tired', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+    },
+  ],
+  story: {
+    title: {
+      chinese: '遊樂場玩',
+      english: 'At the Playground',
+    },
+    content: [
+      [
+        { character: '我', english: 'I' },
+        { character: '去', english: 'go' },
+        { character: '遊樂場', english: 'playground' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+      [
+        { character: '我', english: 'I' },
+        { character: '玩', english: 'play' },
+        { character: '滑梯', english: 'slide', isVocab: true },
+        { character: '和', english: 'and' },
+        { character: '鞦韆', english: 'swing', isVocab: true },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+      [
+        { character: '我們', english: 'we' },
+        { character: '排隊', english: 'line up', isVocab: true },
+        { character: '輪流', english: 'take turns', isVocab: true },
+        { character: '玩', english: 'play' },
+        { character: '。', english: '', isPunctuation: true },
+      ],
+      [
+        { character: '好', english: 'so' },
+        { character: '累', english: 'tired', isVocab: true },
+        { character: '但是', english: 'but' },
+        { character: '好', english: 'very' },
+        { character: '開心', english: 'happy' },
+        { character: '！', english: '', isPunctuation: true },
+      ],
+    ],
+  },
+  quiz: [
+    {
+      id: 'q1',
+      type: 'multiple-choice',
+      question: 'What does 滑梯 mean?',
+      options: ['swing', 'slide', 'seesaw', 'sandbox'],
+      correctAnswer: 'slide',
+    },
+    {
+      id: 'q2',
+      type: 'multiple-choice',
+      question: 'What does 排隊 mean?',
+      options: ['run', 'jump', 'line up', 'sit'],
+      correctAnswer: 'line up',
+    },
+    {
+      id: 'q3',
+      type: 'multiple-choice',
+      question: "Which word means 'tired'?",
+      options: ['累', '危險', '安全', '爬'],
+      correctAnswer: '累',
+    },
+    {
+      id: 'q4',
+      type: 'matching',
+      question: 'Match the words:',
+      pairs: [
+        { chinese: '滑梯', english: 'slide' },
+        { chinese: '鞦韆', english: 'swing' },
+        { chinese: '排隊', english: 'line up' },
+      ],
+    },
+    {
+      id: 'q5',
+      type: 'multiple-choice',
+      question: '危險 means:',
+      options: ['safe', 'fun', 'dangerous', 'easy'],
+      correctAnswer: 'dangerous',
+    },
+  ],
+};
+
+export default lesson;
