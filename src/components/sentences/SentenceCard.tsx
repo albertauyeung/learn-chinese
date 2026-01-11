@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import type { Sentence } from '../../data/types';
 import { WordBreakdown } from './WordBreakdown';
@@ -13,9 +13,13 @@ interface SentenceCardProps {
 
 export function SentenceCard({ sentence, lessonId, index }: SentenceCardProps) {
   const markSentenceViewed = useAppStore((state) => state.markSentenceViewed);
+  const hasMarked = useRef(false);
 
   useEffect(() => {
-    markSentenceViewed(lessonId, sentence.id);
+    if (!hasMarked.current) {
+      hasMarked.current = true;
+      markSentenceViewed(lessonId, sentence.id);
+    }
   }, [lessonId, sentence.id, markSentenceViewed]);
 
   return (

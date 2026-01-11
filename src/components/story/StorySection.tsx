@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useOutletContext } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import type { Lesson } from '../../data/types';
@@ -14,13 +14,17 @@ interface OutletContext {
 export function StorySection() {
   const { lesson } = useOutletContext<OutletContext>();
   const markStoryRead = useAppStore((state) => state.markStoryRead);
+  const hasMarked = useRef(false);
 
   const [showJyutping, setShowJyutping] = useState(true);
   const [showPinyin, setShowPinyin] = useState(false);
   const [showEnglish, setShowEnglish] = useState(false);
 
   useEffect(() => {
-    markStoryRead(lesson.id);
+    if (!hasMarked.current) {
+      hasMarked.current = true;
+      markStoryRead(lesson.id);
+    }
   }, [lesson.id, markStoryRead]);
 
   return (

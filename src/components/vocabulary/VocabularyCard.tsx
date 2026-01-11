@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import type { VocabularyItem } from '../../data/types';
 import { getJyutping, getPinyin } from '../../utils/romanization';
@@ -13,13 +13,16 @@ interface VocabularyCardProps {
 
 export function VocabularyCard({ item, lessonId, index }: VocabularyCardProps) {
   const markVocabularyViewed = useAppStore((state) => state.markVocabularyViewed);
+  const hasMarked = useRef(false);
 
   const jyutping = getJyutping(item.character);
   const pinyinText = getPinyin(item.character);
 
   useEffect(() => {
-    // Mark as viewed when the card is rendered
-    markVocabularyViewed(lessonId, item.id);
+    if (!hasMarked.current) {
+      hasMarked.current = true;
+      markVocabularyViewed(lessonId, item.id);
+    }
   }, [lessonId, item.id, markVocabularyViewed]);
 
   return (
