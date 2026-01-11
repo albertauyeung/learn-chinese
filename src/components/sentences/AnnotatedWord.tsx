@@ -19,14 +19,14 @@ export function AnnotatedWord({ word, showAnnotations = true }: AnnotatedWordPro
   const pinyinText = getPinyin(word.character);
 
   return (
-    <div
-      className="relative inline-block"
+    <span
+      className="relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <motion.span
         className={`
-          chinese-text text-2xl cursor-pointer transition-colors
+          chinese-text text-2xl cursor-pointer transition-colors inline-block
           ${word.isVocab ? 'text-accent-blue font-semibold' : 'text-white'}
           hover:text-accent-pink
         `}
@@ -38,13 +38,14 @@ export function AnnotatedWord({ word, showAnnotations = true }: AnnotatedWordPro
       <AnimatePresence>
         {isHovered && showAnnotations && (
           <motion.div
-            className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-20"
+            className="absolute bottom-full mb-2 z-20 pointer-events-none"
+            style={{ left: '50%', transform: 'translateX(-50%)' }}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 10 }}
             transition={{ duration: 0.15 }}
           >
-            <div className="bg-dark-hover rounded-xl px-4 py-3 shadow-lg border border-dark-card min-w-max">
+            <div className="bg-dark-hover rounded-xl px-4 py-3 shadow-lg border border-dark-card whitespace-nowrap">
               <div className="text-center space-y-1">
                 <p className="text-accent-orange text-sm">{jyutping}</p>
                 <p className="text-accent-purple text-sm">{pinyinText}</p>
@@ -58,6 +59,6 @@ export function AnnotatedWord({ word, showAnnotations = true }: AnnotatedWordPro
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </span>
   );
 }
